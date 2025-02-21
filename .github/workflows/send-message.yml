@@ -23,6 +23,7 @@ jobs:
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_API_URL: ${{ secrets.LLM_API_URL }}
+          LLM_MODEL: ${{ secrets.LLM_MODEL }}
           LLM_PROMPT: ${{ secrets.LLM_PROMPT }}
           SLACK_WEBHOOK_TITLE: ${{ secrets.SLACK_WEBHOOK_TITLE }}
           SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
