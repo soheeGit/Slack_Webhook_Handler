@@ -2,6 +2,8 @@ name: send message
 
 on:
     workflow_dispatch:
+    schedule:
+      - cron: "*/5 * * * *" # 매 5분마다 실행(보장 안됨)
 
 jobs:
   send-message:
@@ -18,8 +20,8 @@ jobs:
 
       - name: Compile and Run Bot
         run: |
-          javac Bot.java
-          java Bot
+          javac Webhook.java
+          java Webhook
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
           LLM_API_URL: ${{ secrets.LLM_API_URL }}
